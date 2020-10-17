@@ -1,0 +1,10 @@
+{
+    "elements": {
+        "app-root": {}
+    },
+    "attributes": {
+        "routerlinkactive": {
+            "context": "li"
+        }
+    }
+}

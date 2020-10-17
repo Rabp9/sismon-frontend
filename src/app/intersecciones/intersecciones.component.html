@@ -1,0 +1,30 @@
+<h2>Administrar Intersecciones</h2>
+<hr>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+        <li class="breadcrumb-item">Mantenimiento</li>
+        <li class="breadcrumb-item active" aria-current="page">Intersecciones</li>
+    </ol>
+</nav>
+<div class="row">
+    <div class="col-8">
+        <button type="button" class="btn btn-outline-primary">
+            <svg class="bi" width="32" height="32" fill="currentColor">
+                <use xlink:href="assets/bootstrap-icons.svg#plus"/>
+            </svg>
+            Nueva Intersección
+        </button>
+    </div>
+    <div class="col">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn" [ngClass]="display=='map' ? 'btn-primary' : 'btn-light'">
+                <input type="radio" name="options" id="option1" checked (click)="showMap()"> Mapa
+            </label>
+            <label class="btn" [ngClass]="display=='list' ? 'btn-primary' : 'btn-light'">
+                <input type="radio" name="options" id="option2" (click)="showList()"> Lista
+            </label>
+        </div>
+    </div>
+</div>
+<ng-template appInterseccionesDisplay></ng-template>
